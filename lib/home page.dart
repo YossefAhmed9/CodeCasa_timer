@@ -83,9 +83,9 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: const Text('StopWatch App'),
         centerTitle: true,
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.brown[200],
       ),
-      backgroundColor: Colors.teal,
+      backgroundColor: Colors.brown[300],
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -106,26 +106,33 @@ class _HomePageState extends State<HomePage> {
             ),
             Expanded(
               child: SingleChildScrollView(
-                child: Padding(
-                  padding: const EdgeInsets.all(15.0),
-                  child: Column(
-                    children: [
-                      ListView.builder(
-                          scrollDirection: Axis.vertical,
-                          shrinkWrap: true,
-                          physics: const BouncingScrollPhysics(),
-                          itemCount: laps.length,
-                          itemBuilder: (context, index) => Row(
-                                children: [
-                                  Text(
-                                    laps[index],
-                                    style: const TextStyle(
-                                        fontSize: 25, color: Colors.red),
-                                  )
-                                ],
-                              )),
-                    ],
-                  ),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(20.0),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.brown[400],
+                          borderRadius: BorderRadius.circular(25),
+                        ),
+                        child: ListView.builder(
+                            scrollDirection: Axis.vertical,
+                            shrinkWrap: true,
+                            physics: const BouncingScrollPhysics(),
+                            itemCount: laps.length,
+                            itemBuilder: (context, index) => Row(
+                                  children: [
+                                    Text(
+                                      laps[index],
+                                      style: TextStyle(
+                                          fontSize: 25,
+                                          color: Colors.brown[900]),
+                                    )
+                                  ],
+                                )),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
@@ -136,7 +143,7 @@ class _HomePageState extends State<HomePage> {
                   child: Container(
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(25),
-                        color: Colors.blue),
+                        color: Colors.green[100]),
                     child: MaterialButton(
                       onPressed: () {
                         start();
@@ -152,12 +159,15 @@ class _HomePageState extends State<HomePage> {
                   onPressed: () {
                     addLaps();
                   },
-                  child: const Icon(Icons.flag),
+                  child: Icon(
+                    Icons.flag,
+                    color: Colors.black,
+                  ),
                 ),
                 Expanded(
                     child: Container(
                         decoration: BoxDecoration(
-                          color: Colors.blue,
+                          color: Colors.green[100],
                           borderRadius: BorderRadius.circular(25),
                         ),
                         child: MaterialButton(
