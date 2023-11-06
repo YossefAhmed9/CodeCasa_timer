@@ -1,16 +1,9 @@
-# stopwatch
+This is the first task of the Android app development internship at CodeCasa.
+It's simple with minimal design so there is no disruption with unnecessary features. it's a pretty straightforward app.
 
-A new Flutter project.
+Key Features:
+Start Timer: Start tracking time with a single tap. The stopwatch begins counting, ensuring you can monitor your progress effortlessly.
 
-## Getting Started
+Lap Timer: Need to record multiple time intervals? Our app makes it easy. Hit the "flag icon" button, and the app stores the current time while the main timer continues running.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Reset Timer: When you're ready to start fresh or clear your previous laps, the "Reset" button instantly returns the timer to zero.
